@@ -28,6 +28,8 @@
 #include "hal_common.h"
 #include "rail_config.h"
 
+#include "em_prs.h"
+
 // Constants
 #define TX_BUFFER_LENGTH 256
 #define RX_BUFFER_LENGTH 4096
@@ -38,16 +40,9 @@
 void RAILCb_Generic(RAIL_Handle_t railHandle, RAIL_Events_t events);
 void gpioCallback(uint8_t);
 
-// State variables
-volatile static bool startTx = false;
-volatile RAIL_RxPacketHandle_t packetHandle = RAIL_RX_PACKET_HANDLE_INVALID;
-
 // Buffers
-static volatile uint8_t tx_buffer[TX_BUFFER_LENGTH];
-static volatile uint8_t rx_buffer[RX_BUFFER_LENGTH];
-static const uint8_t payload[PAYLOAD_LENGTH] = \
-		{0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07,
-	     0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F};
+static uint8_t rx_buffer[RX_BUFFER_LENGTH];
+static uint8_t tx_buffer[TX_BUFFER_LENGTH];
 
 void assert(bool condition)
 {
@@ -130,12 +125,6 @@ void radioInit(void)
   RAIL_ConfigEvents(railHandle, RAIL_EVENTS_ALL, RAIL_EVENT_TX_FIFO_ALMOST_EMPTY | RAIL_EVENT_RX_FIFO_ALMOST_FULL);
 }
 
-void loadPayloadDirectly(void)
-{
-	memcpy(tx_buffer, payload, PAYLOAD_LENGTH);
-	RAIL_SetTxFifo(railHandle, tx_buffer, PAYLOAD_LENGTH, TX_BUFFER_LENGTH);
-}
-
 typedef enum
 {
 	tone,
@@ -143,15 +132,30 @@ typedef enum
 	idle
 } modes;
 
-volatile static modes current_mode = idle;
-volatile static uint16_t iq_available = 0;
+volatile static modes current_mode;
+volatile static uint16_t iq_available;
+
+void reset(void)
+{
+	memset(tx_buffer, 0, TX_BUFFER_LENGTH);
+	memset(rx_buffer, 0, RX_BUFFER_LENGTH);
+	current_mode = idle;
+	iq_available = 0;
+	RAIL_ResetFifo(railHandle, false, true);
+}
 
 int main(void)
 {
+  current_mode = idle;
+  iq_available = 0;
+  memset(tx_buffer, 0, TX_BUFFER_LENGTH);
+  memset(rx_buffer, 0, RX_BUFFER_LENGTH);
+
+
   CHIP_Init();
   radioInit();
   peripheralInit();
-  RAIL_Idle(railHandle, RAIL_IDLE, true);
+  RAIL_Idle(railHandle, RAIL_IDLE_ABORT, true);
 
   while (1)
   {
@@ -167,7 +171,8 @@ int main(void)
 	  {
 		  assert(current_mode == tone);
 		  current_mode = idle;
-		  RAIL_Idle(railHandle, RAIL_IDLE, true);
+		  reset();
+		  RAIL_Idle(railHandle, RAIL_IDLE_ABORT, true);
 	  }
 	  else if(c == (int8_t)'r')
 	  {
@@ -189,6 +194,7 @@ int main(void)
 			  printf("%d;%d\n", I, Q);
 		  }
 		  iq_available = 0;
+		  reset();
 	  }
   }
 }
@@ -199,8 +205,9 @@ void RAILCb_Generic(RAIL_Handle_t railHandle, RAIL_Events_t events)
   {
 	  assert(current_mode == receive);
 	  iq_available = RAIL_GetRxFifoBytesAvailable(railHandle);
-	  RAIL_ReadRxFifo(railHandle, rx_buffer, RX_BUFFER_LENGTH);
+	  RAIL_ReadRxFifo(railHandle, rx_buffer, iq_available);
 	  RAIL_Idle(railHandle, RAIL_IDLE_ABORT, true);
+	  RAIL_ResetFifo(railHandle, false, true);
 	  current_mode = idle;
   }
   if(events & RAIL_EVENTS_RX_COMPLETION)
@@ -212,5 +219,4 @@ void RAILCb_Generic(RAIL_Handle_t railHandle, RAIL_Events_t events)
 
 void gpioCallback(uint8_t pin)
 {
-	startTx = true;
 }
