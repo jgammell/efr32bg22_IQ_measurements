@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<device:XMLDevice xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:device="http://www.silabs.com/ss/hwconfig/document/device.ecore" name="EFR32BG22C224F512IM40" partId="mcu.arm.efr32.bg22.efr32bg22c224f512im40" contextId="com.silabs.sdk.stack.super:2.7.6._310455041">
+  <mode name="DefaultMode">
+    <property object="BUTTON" propertyId="BUTTON.showadvanced.BOOL" value="1"/>
+    <property object="CMU" propertyId="ABPeripheral.included" value="true"/>
+    <property object="CMU" propertyId="CMU.HAL_CLK_EM23CLK_SOURCE.ENUM" value="HAL_CLK_LFCLK_SOURCE_LFRCO"/>
+    <property object="CMU" propertyId="CMU.HAL_CLK_EM4CLK_SOURCE.ENUM" value="HAL_CLK_LFCLK_SOURCE_LFRCO"/>
+    <property object="CMU" propertyId="CMU.HAL_CLK_HFCLK_SOURCE.ENUM" value="HAL_CLK_HFCLK_SOURCE_HFXO"/>
+    <property object="CMU" propertyId="CMU.HAL_CLK_RTCCCLK_SOURCE.ENUM" value="HAL_CLK_LFCLK_SOURCE_LFRCO"/>
+    <property object="DCDC" propertyId="ABPeripheral.included" value="true"/>
+    <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
+    <property object="I2C0" propertyId="I2C.showadvanced.BOOL" value="1"/>
+    <property object="I2C1" propertyId="I2C.showadvanced.BOOL" value="1"/>
+    <property object="LED" propertyId="ABPeripheral.included" value="true"/>
+    <property object="LED" propertyId="LED.showadvanced.BOOL" value="1"/>
+    <property object="PA" propertyId="ABPeripheral.included" value="true"/>
+    <property object="PTI" propertyId="ABPeripheral.included" value="true"/>
+    <property object="SERIAL" propertyId="ABPeripheral.included" value="true"/>
+    <property object="SERIAL" propertyId="SERIAL.showadvanced.BOOL" value="1"/>
+    <property object="USART0" propertyId="USART.HAL_USART_RXSTART.INT" value="16"/>
+    <property object="USART0" propertyId="USART.HAL_USART_RXSTOP.INT" value="16"/>
+    <property object="USART0" propertyId="USART.HAL_USART_RX_QUEUE_SIZE.INT" value="128"/>
+    <property object="USART0" propertyId="USART.HAL_USART_TX_QUEUE_SIZE.INT" value="128"/>
+    <property object="USART0" propertyId="USART.showadvanced.BOOL" value="1"/>
+    <property object="USART1" propertyId="USART.HAL_USART_RXSTART.INT" value="16"/>
+    <property object="USART1" propertyId="USART.HAL_USART_RXSTOP.INT" value="16"/>
+    <property object="USART1" propertyId="USART.HAL_USART_RX_QUEUE_SIZE.INT" value="128"/>
+    <property object="USART1" propertyId="USART.HAL_USART_TX_QUEUE_SIZE.INT" value="128"/>
+    <property object="USART1" propertyId="USART.showadvanced.BOOL" value="1"/>
+  </mode>
+  <modeTransition>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.source" value="RESET"/>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.target" value="DefaultMode"/>
+  </modeTransition>
+</device:XMLDevice>

@@ -1,0 +1,688 @@
+#ISD afv6
+# Simplicity Studio version: 5.18.5.202006060116-38
+
+# Application configuration
+stackId: com.silabs.sdk.stack.super
+stackRoot: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7
+appId: flex
+frameworkRoot: protocol\flex\connect
+architecture: efr32~family[B]~series[2]~device_configuration[2]~performance[C]~radio[224]~flash[512K]~temp[I]~package[M]~pins[40]~!module+none+gcc
+exactArchitectureToolchain: com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904
+deviceName: rail_tutorial
+sourceSampleAppId: simple-rail-with-hal-efr32
+generationDirectory: PATH(ISC_RELATIVE):.
+
+# Devices
+
+# UI customization
+hiddenLayoutElements: ble,radio
+
+# Plugin configuration
+appPlugin: antenna-stub=false
+appPlugin: ash-v3=false
+appPlugin: ble=false
+appPlugin: bootloader-interface=false
+appPlugin: buffer-pool-memory-manager=false
+appPlugin: circular-queue=false
+appPlugin: coexistence=false
+appPlugin: coexistence-stub=false
+appPlugin: command-interpreter=false
+appPlugin: command-interpreter-rail=false
+appPlugin: cpu-tracing=false
+appPlugin: csp-host=false
+appPlugin: csp-ncp=false
+appPlugin: debug-print=false
+appPlugin: diagnostic=false
+appPlugin: diagnostic-stub=false
+appPlugin: dmp-demo-ui=false
+appPlugin: dmp-demo-utils=false
+appPlugin: fem-control=false
+appPlugin: flash-data=false
+appPlugin: frequency-hopping=false
+appPlugin: hal=false
+appPlugin: hal-efr32=true
+appPlugin: heartbeat=false
+appPlugin: host-network-management-cli=false
+appPlugin: idle-sleep=false
+appPlugin: lcd-graphics=false
+appPlugin: mailbox-client=false
+appPlugin: mailbox-server=false
+appPlugin: main=false
+appPlugin: mbedtls=false
+appPlugin: micrium-rtos=false
+appPlugin: ncp-main=false
+appPlugin: ncp-uart-link=false
+appPlugin: nvm3=false
+appPlugin: ota-bootloader-test-common=false
+appPlugin: ota-broadcast-bootloader-client=false
+appPlugin: ota-broadcast-bootloader-server=false
+appPlugin: ota-broadcast-bootloader-test=false
+appPlugin: ota-unicast-bootloader-client=false
+appPlugin: ota-unicast-bootloader-server=false
+appPlugin: ota-unicast-bootloader-test=false
+appPlugin: pa-auto-mode=false
+appPlugin: pa-conversions=false
+appPlugin: poll=false
+appPlugin: rail-app-config=true
+appPlugin: rail-library=true
+appPlugin: rail-library-mp=false
+appPlugin: railtest-base=false
+appPlugin: railtest-ram-modem-reconfiguration=false
+appPlugin: rangetest-base=false
+appPlugin: response-printf=false
+appPlugin: serial=false
+appPlugin: serial-bootloader-cli=false
+appPlugin: sim-eeprom1=false
+appPlugin: sim-eeprom2=false
+appPlugin: sim-eeprom2-1to2-upgrade=false
+appPlugin: sim-eeprom2-1to2-upgrade-stub=false
+appPlugin: sim-eeprom2-to-nvm3-upgrade=false
+appPlugin: sim-eeprom2-to-nvm3-upgrade-stub=false
+appPlugin: spi-flash=false
+appPlugin: stack-aes-security=false
+appPlugin: stack-cli=false
+appPlugin: stack-common=false
+appPlugin: stack-counters=false
+appPlugin: stack-mac-queue=false
+appPlugin: stack-parent-support=false
+appPlugin: stack-xxtea-security=false
+appPlugin: unix-library=false
+appPlugin: wmbus=false
+appPlugin: wstk-sensors=false
+
+# Setup configurations
+{setupId:additionalFiles
+PATH(ISC_RELATIVE):main.c
+}
+{setupId:boardHeader
+allowMissingHeader:true
+useHeaderInPlace:true
+efr32~family[F]~series[1]~device_configuration[1]~performance[P]~radio[132]~flash[256K]~temp[G]~package[M]~pins[48]+BRD4252A+iar=USE_HARDWARE_CONFIGURATOR,,,
+efr32~family[B]~series[2]~device_configuration[2]~performance[C]~radio[224]~flash[512K]~temp[I]~package[M]~pins[40]~!module+none+gcc=USE_HARDWARE_CONFIGURATOR,,,
+}
+{setupId:bookkeeping
+}
+{setupId:bootloader
+efr32~series[1]~device_configuration[1]=null,
+efr32~series[1]~device_configuration[2]=null,
+efr32~series[1]~device_configuration[3]=null,
+efr32~series[1]~device_configuration[4]=null,
+efr32~series[2]~device_configuration[1]=null,
+}
+{setupId:callbackConfiguration
+main:false
+}
+{setupId:commandLineConfiguration
+off
+}
+{setupId:debugConfiguration
+off
+area name off
+appSerial=1
+}
+{setupId:eventConfiguration
+}
+{setupId:hwConfig
+lastArchitectureId=efr32~family[B]~series[2]~device_configuration[2]~performance[C]~radio[224]~flash[512K]~temp[I]~package[M]~pins[40]~!module+none+gcc
+featureLevel=1
+active=true
+lastHwConfFileUsed=PATH(ISC_RELATIVE):custom_efr32bg22c224f512im40.hwconf
+}
+{setupId:information
+\{key:description
+This is a simple RAIL sample application, with HAL.
+
+NOTE: Due to the higher current consumption of the continuous radio usage (especially in Rx Mode), it is not recommended to power the boards from a coin cell. Instead, an USB power bank can be used if portability is needed.
+\}
+}
+{setupId:macros
+}
+{setupId:multiPhyRadioConfigurator
+<?xml version="1.0" encoding="UTF-8"?>
+<multi_phy_configuration part_family="lynx" part_revision="A0" rail_adapter_version="rail_api_2.x" status_code="0" xsd_version="0.0.20">
+  <base_channel_configurations>
+    <base_channel_configuration name="Protocol Configuration" profile="serializableObject:Efr32RadioConfiguratorProfile:LYNX:Base">
+      <profile_inputs>
+        <input>
+          <key>AFC_PERIOD</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>AFC_STEP_SCALE</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>AGC_HYSTERESIS</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>AGC_PERIOD</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>AGC_POWER_TARGET</key>
+          <value>int:-8</value>
+        </input>
+        <input>
+          <key>AGC_SCHEME</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>AGC_SETTLING_DELAY</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>AGC_SPEED</key>
+          <value>serializableObject:EnumDataItem:1</value>
+        </input>
+        <input>
+          <key>ANTDIVMODE</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>ANTDIVREPEATDIS</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>ASYNCHRONOUS_RX_ENABLE</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>BANDWIDTH_HZ</key>
+          <value>int:350000</value>
+        </input>
+        <input>
+          <key>BASE_FREQUENCY_HZ</key>
+          <value>long:2450000000</value>
+        </input>
+        <input>
+          <key>BAUDRATE_TOL_PPM</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>BITRATE</key>
+          <value>int:250000</value>
+        </input>
+        <input>
+          <key>CHANNEL_SPACING_HZ</key>
+          <value>int:1000000</value>
+        </input>
+        <input>
+          <key>CRC_BIT_ENDIAN</key>
+          <value>serializableObject:EnumDataItem:1</value>
+        </input>
+        <input>
+          <key>CRC_BYTE_ENDIAN</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>CRC_INPUT_ORDER</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>CRC_INVERT</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>CRC_PAD_INPUT</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>CRC_POLY</key>
+          <value>serializableObject:EnumDataItem:2</value>
+        </input>
+        <input>
+          <key>CRC_SEED</key>
+          <value>long:0</value>
+        </input>
+        <input>
+          <key>DEVIATION</key>
+          <value>int:125000</value>
+        </input>
+        <input>
+          <key>DIFF_ENCODING_MODE</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>DSA_ENABLE</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>DSSS_CHIPPING_CODE</key>
+          <value>long:0</value>
+        </input>
+        <input>
+          <key>DSSS_LEN</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>DSSS_SPREADING_FACTOR</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>ENABLE_RETIME</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>ERRORS_IN_TIMING_WINDOW</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>ETSI_CAT1_COMPATIBLE</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>FEC_EN</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>FIRSTFRAME_BITSPERWORD</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>FIXED_LENGTH_SIZE</key>
+          <value>int:16</value>
+        </input>
+        <input>
+          <key>FRAME_BITENDIAN</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>FRAME_CODING</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>FRAME_LENGTH_TYPE</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_0_FILTER</key>
+          <value>bool:true</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_0_LENGTH</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_0_VALID</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_1_FILTER</key>
+          <value>bool:true</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_1_LENGTH</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_1_VALID</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_2_FILTER</key>
+          <value>bool:true</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_2_LENGTH</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_2_VALID</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_3_FILTER</key>
+          <value>bool:true</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_3_LENGTH</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_3_VALID</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_4_FILTER</key>
+          <value>bool:true</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_4_LENGTH</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_4_VALID</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_5_FILTER</key>
+          <value>bool:true</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_5_LENGTH</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_5_VALID</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_6_FILTER</key>
+          <value>bool:true</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_6_LENGTH</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_6_VALID</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_7_FILTER</key>
+          <value>bool:true</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_7_LENGTH</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_7_VALID</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_BITS</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_LOC</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>FRAME_TYPE_LSBIT</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>FREQUENCY_COMP_MODE</key>
+          <value>serializableObject:EnumDataItem:3</value>
+        </input>
+        <input>
+          <key>FREQUENCY_OFFSET_PERIOD</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>FREQ_OFFSET_HZ</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>FSK_SYMBOL_MAP</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>HEADER_ADDTRAILTXDATA_EN</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>HEADER_CALC_CRC</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>HEADER_EN</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>HEADER_EXCLUDESUBFRAMEWCNT_EN</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>HEADER_SIZE</key>
+          <value>int:1</value>
+        </input>
+        <input>
+          <key>HEADER_WHITE_EN</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>IF_FREQUENCY_HZ</key>
+          <value>int:1370000</value>
+        </input>
+        <input>
+          <key>INPUT_DECIMATION_FILTER_ALLOW_DEC3</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>INPUT_DECIMATION_FILTER_ALLOW_DEC8</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>IN_2FSK_OPT_SCOPE</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>IRCAL_POWER_LEVEL</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>IRCAL_RXTX_PATH_COMMON</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>LO_INJECTION_SIDE</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>MANCHESTER_MAPPING</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>MODULATION_TYPE</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>NUMBER_OF_TIMING_WINDOWS</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>OOK_SLICER_LEVEL</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>PAYLOAD_ADDTRAILTXDATA_EN</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>PAYLOAD_CRC_EN</key>
+          <value>bool:true</value>
+        </input>
+        <input>
+          <key>PAYLOAD_WHITE_EN</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>PLL_BANDWIDTH_MIRACLE_MODE</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>PLL_BANDWIDTH_RX</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>PLL_BANDWIDTH_TX</key>
+          <value>serializableObject:EnumDataItem:1</value>
+        </input>
+        <input>
+          <key>PREAMBLE_LENGTH</key>
+          <value>int:40</value>
+        </input>
+        <input>
+          <key>PREAMBLE_PATTERN</key>
+          <value>int:1</value>
+        </input>
+        <input>
+          <key>PREAMBLE_PATTERN_LEN</key>
+          <value>int:2</value>
+        </input>
+        <input>
+          <key>RSSI_PERIOD</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>RX_BITRATE_OFFSET_HZ</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>RX_XTAL_ERROR_PPM</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>SHAPING_FILTER</key>
+          <value>serializableObject:EnumDataItem:1</value>
+        </input>
+        <input>
+          <key>SHAPING_FILTER_PARAM</key>
+          <value>float:0.5</value>
+        </input>
+        <input>
+          <key>SQI_THRESHOLD</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>SRC1_RANGE_AVAILABLE_MINIMUM</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>SRC_DISABLE</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>SYMBOLS_IN_TIMING_WINDOW</key>
+          <value>int:14</value>
+        </input>
+        <input>
+          <key>SYMBOL_ENCODING</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>SYNCWORD_0</key>
+          <value>long:63117</value>
+        </input>
+        <input>
+          <key>SYNCWORD_1</key>
+          <value>long:0</value>
+        </input>
+        <input>
+          <key>SYNCWORD_LENGTH</key>
+          <value>int:16</value>
+        </input>
+        <input>
+          <key>SYNCWORD_TX_SKIP</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>TARGET_OSR</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>TEST_BER</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>TIMING_DETECTION_THRESHOLD</key>
+          <value>int:20</value>
+        </input>
+        <input>
+          <key>TIMING_RESYNC_PERIOD</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>TIMING_SAMPLE_THRESHOLD</key>
+          <value>int:12</value>
+        </input>
+        <input>
+          <key>TX_XTAL_ERROR_PPM</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>VAR_LENGTH_ADJUST</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>VAR_LENGTH_BITENDIAN</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>VAR_LENGTH_BYTEENDIAN</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>VAR_LENGTH_INCLUDECRC</key>
+          <value>bool:false</value>
+        </input>
+        <input>
+          <key>VAR_LENGTH_LOC</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>VAR_LENGTH_MAXLENGTH</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>VAR_LENGTH_MINLENGTH</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>VAR_LENGTH_NUMBITS</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>VAR_LENGTH_SHIFT</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>VITERBI_ENABLE</key>
+          <value>null</value>
+        </input>
+        <input>
+          <key>WHITE_OUTPUT_BIT</key>
+          <value>int:0</value>
+        </input>
+        <input>
+          <key>WHITE_POLY</key>
+          <value>serializableObject:EnumDataItem:0</value>
+        </input>
+        <input>
+          <key>WHITE_SEED</key>
+          <value>int:65535</value>
+        </input>
+        <input>
+          <key>XTAL_FREQUENCY_HZ</key>
+          <value>int:38400000</value>
+        </input>
+      </profile_inputs>
+      <phy name="serializableObject:Efr32RadioConfiguratorPhy:LYNX:Base:PHY_Datasheet_2450M_2GFSK_250Kbps_125K"/>
+      <channel_config_entries>
+        <channel_config_entry name="Channel Group 1">
+          <physical_channel_offset>SAME_AS_FIRST_CHANNEL</physical_channel_offset>
+          <channel_number_start>0</channel_number_start>
+          <channel_number_end>20</channel_number_end>
+          <max_power>RAIL_TX_POWER_MAX</max_power>
+        </channel_config_entry>
+      </channel_config_entries>
+    </base_channel_configuration>
+  </base_channel_configurations>
+</multi_phy_configuration>
+}
+{setupId:phyOptions
+}
+{setupId:quizz
+}
+{setupId:template
+--version:2
+--backupValues:
+linkerLdFile=$--halDir--$/../../Device/SiliconLabs/$--chipFamilyUpperCase--$/Source/GCC/$--chipFamilyLowerCase--$.ld
+}
+{setupId:token
+}
+
+# Plugin options
