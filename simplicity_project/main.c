@@ -53,6 +53,27 @@ void assert(bool condition)
 	}
 }
 
+#define ONESHOT_TIMER TIMER0
+#define ONESHOT_TIMER_IRQn TIMER0_IRQn
+#define ONESHOT_TIMER_IRQHandler TIMER0_IRQHandler
+
+
+
+void init_timer_oneshot(void)
+{
+	ONESHOT_TIMER->CMD = TIMER_CMD_STOP;
+	ONESHOT_TIMER->CFG = 0;
+	ONESHOT_TIMER->CFG |= TIMER_CFG_MODE_DOWN;
+	ONESHOT_TIMER->CFG |= TIMER_CFG_OSMEN;
+	ONESHOT_TIMER->CTRL = 0;
+	ONESHOT_TIMER->IEN = 0;
+	ONESHOT_TIMER->IEN |= TIMER_IEN_UF;
+	ONESHOT_TIMER->CC[0].CFG = 0;
+	ONESHOT_TIMER->CC[1].CFG = 0;
+	ONESHOT_TIMER->CC[2].CFG = 0;
+	NVIC_EnableIRQ(ONESHOT_TIMER_IRQn);
+}
+
 void peripheralInit(void)
 {
 	// Misc. initializations
@@ -171,7 +192,7 @@ int main(void)
 	  {
 		  assert(current_mode == tone);
 		  current_mode = idle;
-		  reset();
+		  //reset();
 		  RAIL_Idle(railHandle, RAIL_IDLE_ABORT, true);
 	  }
 	  else if(c == (int8_t)'r')
@@ -205,7 +226,7 @@ void RAILCb_Generic(RAIL_Handle_t railHandle, RAIL_Events_t events)
   {
 	  assert(current_mode == receive);
 	  iq_available = RAIL_GetRxFifoBytesAvailable(railHandle);
-	  RAIL_ReadRxFifo(railHandle, rx_buffer, iq_available);
+	  //RAIL_ReadRxFifo(railHandle, rx_buffer, iq_available);
 	  RAIL_Idle(railHandle, RAIL_IDLE_ABORT, true);
 	  RAIL_ResetFifo(railHandle, false, true);
 	  current_mode = idle;

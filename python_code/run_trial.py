@@ -35,6 +35,7 @@ def save_data(data):
                 %(dt.year, dt.month, dt.hour, dt.day, dt.minute, dt.second)
     with open(os.path.join(os.getcwd(), 'data', filename), 'wb') as F:
         pickle.dump(data, F)
+    return filename
     
 
 try:
@@ -45,7 +46,7 @@ try:
     raw_output = read_iq_data(rx)
     set_state_idle(tx)
     parsed_data = parse_raw_output(raw_output)
-    save_data(parsed_data)
+    data_filename = save_data(parsed_data)
 finally:
     del tx
     del rx

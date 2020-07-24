@@ -21,7 +21,7 @@ def normalize_data(data):
     data = np.array([d/(np.sqrt(2)*std) for d in data])
     return data
 
-data_filename = r'efr32bg22IQ_2020-7-17_23-20-58.pickle'
+data_filename = r'efr32bg22IQ_2020-7-12_24-46-59.pickle'
 with open(os.path.join(os.getcwd(), 'data', data_filename), 'rb') as F:
     Data = pickle.load(F)
 I = Data[0]
