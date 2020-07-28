@@ -42,11 +42,9 @@ try:
     tx = Radio(r'COM8')
     rx = Radio(r'COM3')
     set_state_tone(tx)
-    set_state_receive(rx)
-    raw_output = read_iq_data(rx)
+    Data = rx.run_trials(0, 10, 6000)
     set_state_idle(tx)
-    parsed_data = parse_raw_output(raw_output)
-    data_filename = save_data(parsed_data)
+    data_filename = save_data(Data)
 finally:
     del tx
     del rx
