@@ -4,38 +4,6 @@
     <base_channel_configuration name="Protocol_Configuration" profile="Base">
       <profile_inputs>
         <input>
-          <key>Advanced.agc_period</key>
-          <value>0</value>
-        </input>
-        <input>
-          <key>Advanced.agc_power_target</key>
-          <value>-8</value>
-        </input>
-        <input>
-          <key>Advanced.agc_speed</key>
-          <value>1</value>
-        </input>
-        <input>
-          <key>Advanced.frequency_comp_mode</key>
-          <value>3</value>
-        </input>
-        <input>
-          <key>Advanced.pll_bandwidth_tx</key>
-          <value>1</value>
-        </input>
-        <input>
-          <key>Advanced.symbols_in_timing_window</key>
-          <value>14</value>
-        </input>
-        <input>
-          <key>Advanced.timing_detection_threshold</key>
-          <value>20</value>
-        </input>
-        <input>
-          <key>Advanced.timing_sample_threshold</key>
-          <value>12</value>
-        </input>
-        <input>
           <key>Channel_Coding.fec_en</key>
           <value>0</value>
         </input>
@@ -269,11 +237,11 @@
         </input>
         <input>
           <key>modem.bitrate</key>
-          <value>50000</value>
+          <value>25000</value>
         </input>
         <input>
           <key>modem.deviation</key>
-          <value>0</value>
+          <value>3000</value>
         </input>
         <input>
           <key>modem.fsk_symbol_map</key>

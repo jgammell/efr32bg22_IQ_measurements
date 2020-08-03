@@ -8,7 +8,7 @@ appId: flex
 frameworkRoot: protocol\flex\connect
 architecture: efr32~family[B]~series[2]~device_configuration[2]~performance[C]~radio[224]~flash[512K]~temp[I]~package[M]~pins[40]~!module+none+gcc
 exactArchitectureToolchain: com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904
-deviceName: rail_tutorial
+deviceName: simple_rail_with_hal
 sourceSampleAppId: simple-rail-with-hal-efr32
 generationDirectory: PATH(ISC_RELATIVE):.
 
@@ -123,7 +123,7 @@ appSerial=1
 {setupId:eventConfiguration
 }
 {setupId:hwConfig
-lastArchitectureId=efr32~family[B]~series[2]~device_configuration[2]~performance[C]~radio[224]~flash[512K]~temp[I]~package[M]~pins[40]~!module+none+gcc
+lastArchitectureId=efr32~family[F]~series[1]~device_configuration[1]~performance[P]~radio[132]~flash[256K]~temp[G]~package[M]~pins[48]~!module+BRD4252A+iar
 featureLevel=1
 active=true
 lastHwConfFileUsed=PATH(ISC_RELATIVE):custom_efr32bg22c224f512im40.hwconf
@@ -188,10 +188,6 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
           <value>bool:false</value>
         </input>
         <input>
-          <key>BANDWIDTH_HZ</key>
-          <value>int:350000</value>
-        </input>
-        <input>
           <key>BASE_FREQUENCY_HZ</key>
           <value>long:2450000000</value>
         </input>
@@ -201,7 +197,7 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
         </input>
         <input>
           <key>BITRATE</key>
-          <value>int:250000</value>
+          <value>int:50000</value>
         </input>
         <input>
           <key>CHANNEL_SPACING_HZ</key>
@@ -237,7 +233,7 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
         </input>
         <input>
           <key>DEVIATION</key>
-          <value>int:125000</value>
+          <value>int:0</value>
         </input>
         <input>
           <key>DIFF_ENCODING_MODE</key>
@@ -442,10 +438,6 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
         <input>
           <key>HEADER_WHITE_EN</key>
           <value>bool:false</value>
-        </input>
-        <input>
-          <key>IF_FREQUENCY_HZ</key>
-          <value>int:1370000</value>
         </input>
         <input>
           <key>INPUT_DECIMATION_FILTER_ALLOW_DEC3</key>
@@ -660,7 +652,6 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
           <value>int:38400000</value>
         </input>
       </profile_inputs>
-      <phy name="serializableObject:Efr32RadioConfiguratorPhy:LYNX:Base:PHY_Datasheet_2450M_2GFSK_250Kbps_125K"/>
       <channel_config_entries>
         <channel_config_entry name="Channel Group 1">
           <physical_channel_offset>SAME_AS_FIRST_CHANNEL</physical_channel_offset>

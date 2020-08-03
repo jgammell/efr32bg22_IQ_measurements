@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <device:XMLDevice xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:device="http://www.silabs.com/ss/hwconfig/document/device.ecore" name="EFR32BG22C224F512IM40" partId="mcu.arm.efr32.bg22.efr32bg22c224f512im40" contextId="com.silabs.sdk.stack.super:2.7.6._310455041">
   <mode name="DefaultMode">
+    <property object="BUTTON" propertyId="BUTTON.BSP_BUTTON0.PIN" value="PB01"/>
+    <property object="BUTTON" propertyId="BUTTON.BSP_BUTTON_COUNT.INT" value="1"/>
     <property object="BUTTON" propertyId="BUTTON.showadvanced.BOOL" value="1"/>
     <property object="CMU" propertyId="ABPeripheral.included" value="true"/>
     <property object="CMU" propertyId="CMU.HAL_CLK_EM23CLK_SOURCE.ENUM" value="HAL_CLK_LFCLK_SOURCE_LFRCO"/>
@@ -27,6 +29,7 @@
     <property object="USART1" propertyId="USART.HAL_USART_RX_QUEUE_SIZE.INT" value="128"/>
     <property object="USART1" propertyId="USART.HAL_USART_TX_QUEUE_SIZE.INT" value="128"/>
     <property object="USART1" propertyId="USART.showadvanced.BOOL" value="1"/>
+    <property object="VCOM" propertyId="ABPeripheral.included" value="true"/>
   </mode>
   <modeTransition>
     <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.source" value="RESET"/>

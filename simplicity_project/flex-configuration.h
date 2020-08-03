@@ -10,7 +10,7 @@
 
 
 // Top level macros
-#define EMBER_AF_DEVICE_NAME "rail_tutorial"
+#define EMBER_AF_DEVICE_NAME "simple_rail_with_hal"
 
 
 // Generated plugin macros

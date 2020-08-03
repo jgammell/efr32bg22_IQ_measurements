@@ -3,7 +3,7 @@ ARCHITECTURE_DIR = efr32
 BUILD_DIR = build
 OUTPUT_DIR = $(BUILD_DIR)/$(ARCHITECTURE_DIR)
 LST_DIR = lst
-PROJECTNAME = rail_tutorial
+PROJECTNAME = simple_rail_with_hal
 
 # Stack and submodule directories
 GLOBAL_BASE_DIR     = ../../../../../SiliconLabs/SimplicityStudio/v4/developer/sdks/gecko_sdk_suite/v2.7/platform/base/hal/..
@@ -53,8 +53,8 @@ SOURCE_FILES = \
   ../../../../../SiliconLabs/SimplicityStudio/v4/developer/sdks/gecko_sdk_suite/v2.7/platform/emlib/src/em_rtc.c \
   ../../../../../SiliconLabs/SimplicityStudio/v4/developer/sdks/gecko_sdk_suite/v2.7/platform/radio/rail_lib/hal/efr32/hal_efr.c \
   ../../../../../SiliconLabs/SimplicityStudio/v4/developer/sdks/gecko_sdk_suite/v2.7/platform/radio/rail_lib/hal/hal_common.c \
-  rail_config.c \
   main.c \
+  rail_config.c \
 
 
 LIB_FILES = \
@@ -177,7 +177,7 @@ CINC = -I./ \
   -Ihal-config \
 
 
-TARGET = rail_tutorial
+TARGET = simple_rail_with_hal
 
 CSOURCES = $(filter %.c, $(SOURCE_FILES))
 ASMSOURCES = $(filter %.s79, $(SOURCE_FILES))

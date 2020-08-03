@@ -4738,7 +4738,7 @@ Discarded input sections
                 0x00000000       0x16 ./external-generated-files/bootloader-interface-app.o
  .text.bootloaderIsCommonBootloader
                 0x00000000       0x10 ./external-generated-files/bootloader-interface-app.o
- .rodata        0x00000000       0x37 ./external-generated-files/bootloader-interface-app.o
+ .rodata        0x00000000       0x89 ./external-generated-files/bootloader-interface-app.o
  .text.verifyMainBootloaderVersion
                 0x00000000       0x50 ./external-generated-files/bootloader-interface-app.o
  .text.halAppBootloaderInit
@@ -4760,16 +4760,18 @@ Discarded input sections
                 0x00000000       0x4e ./external-generated-files/bootloader-interface-app.o
  .text.halAppBootloaderEraseRawStorage
                 0x00000000       0x48 ./external-generated-files/bootloader-interface-app.o
+ .text.halAppBootloaderStorageBusy
+                0x00000000       0x34 ./external-generated-files/bootloader-interface-app.o
  .text.halAppBootloaderGetVersion
                 0x00000000       0x22 ./external-generated-files/bootloader-interface-app.o
  .text.halAppBootloaderSupportsIbr
                 0x00000000       0x18 ./external-generated-files/bootloader-interface-app.o
- .debug_info    0x00000000     0x2b82 ./external-generated-files/bootloader-interface-app.o
+ .debug_info    0x00000000     0x2b9d ./external-generated-files/bootloader-interface-app.o
  .debug_abbrev  0x00000000      0x305 ./external-generated-files/bootloader-interface-app.o
- .debug_loc     0x00000000      0x3ac ./external-generated-files/bootloader-interface-app.o
+ .debug_loc     0x00000000      0x3d8 ./external-generated-files/bootloader-interface-app.o
  .debug_aranges
-                0x00000000       0x88 ./external-generated-files/bootloader-interface-app.o
- .debug_ranges  0x00000000       0x78 ./external-generated-files/bootloader-interface-app.o
+                0x00000000       0x90 ./external-generated-files/bootloader-interface-app.o
+ .debug_ranges  0x00000000       0x80 ./external-generated-files/bootloader-interface-app.o
  .debug_macro   0x00000000      0x80a ./external-generated-files/bootloader-interface-app.o
  .debug_macro   0x00000000      0xac0 ./external-generated-files/bootloader-interface-app.o
  .debug_macro   0x00000000      0x16d ./external-generated-files/bootloader-interface-app.o
@@ -4928,10 +4930,10 @@ Discarded input sections
  .debug_macro   0x00000000       0x7e ./external-generated-files/bootloader-interface-app.o
  .debug_macro   0x00000000       0x82 ./external-generated-files/bootloader-interface-app.o
  .debug_macro   0x00000000       0x1c ./external-generated-files/bootloader-interface-app.o
- .debug_line    0x00000000     0x19e3 ./external-generated-files/bootloader-interface-app.o
- .debug_str     0x00000000   0x18fb53 ./external-generated-files/bootloader-interface-app.o
+ .debug_line    0x00000000     0x19dd ./external-generated-files/bootloader-interface-app.o
+ .debug_str     0x00000000   0x18fbc8 ./external-generated-files/bootloader-interface-app.o
  .comment       0x00000000       0x7f ./external-generated-files/bootloader-interface-app.o
- .debug_frame   0x00000000      0x1e0 ./external-generated-files/bootloader-interface-app.o
+ .debug_frame   0x00000000      0x1fc ./external-generated-files/bootloader-interface-app.o
  .ARM.attributes
                 0x00000000       0x3c ./external-generated-files/bootloader-interface-app.o
  COMMON         0x00000000      0x384 ./external-generated-files/bootloader-interface-app.o
@@ -5142,7 +5144,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x82 ./external-generated-files/bootloader-interface.o
  .debug_macro   0x00000000       0x1c ./external-generated-files/bootloader-interface.o
  .debug_line    0x00000000      0xf40 ./external-generated-files/bootloader-interface.o
- .debug_str     0x00000000   0x17ffa5 ./external-generated-files/bootloader-interface.o
+ .debug_str     0x00000000   0x17ffac ./external-generated-files/bootloader-interface.o
  .comment       0x00000000       0x7f ./external-generated-files/bootloader-interface.o
  .debug_frame   0x00000000       0xac ./external-generated-files/bootloader-interface.o
  .ARM.attributes
@@ -12223,7 +12225,7 @@ OUTPUT(rail_tutorial.axf elf32-littlearm)
  .debug_line    0x00012516      0x879 ./rail_config.o
  .debug_line    0x00012d8f       0xd7 ./rail-app-config/EFR32_B_2_2/gcc/startup_efr32bg22.o
 
-.debug_str      0x00000000   0x19b080
+.debug_str      0x00000000   0x19b087
  .debug_str     0x00000000   0x17d466 ./emdrv/dmadrv.o
                              0x17dab0 (size before relaxing)
  .debug_str     0x0017d466     0x11e7 ./emdrv/gpiointerrupt.o
@@ -12258,23 +12260,23 @@ OUTPUT(rail_tutorial.axf elf32-littlearm)
                              0x17c02a (size before relaxing)
  .debug_str     0x00191153      0x142 ./hal-efr32/bsp_stk_leds.o
                              0x17baa5 (size before relaxing)
- .debug_str     0x00191295     0x3c93 ./hal-efr32/hal_common.o
-                             0x17d060 (size before relaxing)
- .debug_str     0x00194f28     0x4668 ./hal-efr32/hal_efr.o
-                             0x18b175 (size before relaxing)
- .debug_str     0x00199590      0x5ee ./hal-efr32/retargetio.o
+ .debug_str     0x00191295     0x3c9a ./hal-efr32/hal_common.o
+                             0x17d067 (size before relaxing)
+ .debug_str     0x00194f2f     0x4668 ./hal-efr32/hal_efr.o
+                             0x18b17c (size before relaxing)
+ .debug_str     0x00199597      0x5ee ./hal-efr32/retargetio.o
                              0x17c248 (size before relaxing)
- .debug_str     0x00199b7e      0x1b1 ./hal-efr32/retargetserial.o
+ .debug_str     0x00199b85      0x1b1 ./hal-efr32/retargetserial.o
                              0x180d2e (size before relaxing)
- .debug_str     0x00199d2f       0x30 ./led_assert.o
+ .debug_str     0x00199d36       0x30 ./led_assert.o
                              0x179a53 (size before relaxing)
- .debug_str     0x00199d5f     0x1078 ./main.o
-                             0x188255 (size before relaxing)
- .debug_str     0x0019add7       0xd7 ./oneshot_timer.o
+ .debug_str     0x00199d66     0x1078 ./main.o
+                             0x18825c (size before relaxing)
+ .debug_str     0x0019adde       0xd7 ./oneshot_timer.o
                              0x17a0ed (size before relaxing)
- .debug_str     0x0019aeae      0x137 ./rail_config.o
+ .debug_str     0x0019aeb5      0x137 ./rail_config.o
                              0x17b3bb (size before relaxing)
- .debug_str     0x0019afe5       0x9b ./rail-app-config/EFR32_B_2_2/gcc/startup_efr32bg22.o
+ .debug_str     0x0019afec       0x9b ./rail-app-config/EFR32_B_2_2/gcc/startup_efr32bg22.o
                                  0xef (size before relaxing)
 
 .debug_frame    0x00000000     0x4110

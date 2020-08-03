@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>rail_tutorial</name>
+	<name>rail_rxtx</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -154,6 +154,11 @@
 			<name>emlib/system_efr32bg22.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/Device/SiliconLabs/EFR32BG22/Source/system_efr32bg22.c</locationURI>
+		</link>
+		<link>
+			<name>external-generated-files/bootloader-interface-app.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/platform/base/hal/micro/cortexm3/efm32/bootloader-interface-app.c</locationURI>
 		</link>
 		<link>
 			<name>external-generated-files/bootloader-interface.c</name>

@@ -20,11 +20,11 @@
   <file name="custom_efr32bg22c224f512im40.hwconf" uri="studio:/project/custom_efr32bg22c224f512im40.hwconf"/>
   <file name="main.c" uri="studio:/project/main.c"/>
   <file name="flex-configuration.h" uri="studio:/project/flex-configuration.h"/>
-  <file name="rail_tutorial-prebuild.py" uri="studio:/project/rail_tutorial-prebuild.py"/>
-  <file name="rail_tutorial.mak" uri="studio:/project/rail_tutorial.mak"/>
-  <file name="rail_tutorial-postbuild.py" uri="studio:/project/rail_tutorial-postbuild.py"/>
-  <file name="rail_tutorial-postbuild.bat" uri="studio:/project/rail_tutorial-postbuild.bat"/>
-  <file name="rail_tutorial-prebuild.bat" uri="studio:/project/rail_tutorial-prebuild.bat"/>
+  <file name="simple_rail_with_hal-prebuild.py" uri="studio:/project/simple_rail_with_hal-prebuild.py"/>
+  <file name="simple_rail_with_hal.mak" uri="studio:/project/simple_rail_with_hal.mak"/>
+  <file name="simple_rail_with_hal-postbuild.py" uri="studio:/project/simple_rail_with_hal-postbuild.py"/>
+  <file name="simple_rail_with_hal-postbuild.bat" uri="studio:/project/simple_rail_with_hal-postbuild.bat"/>
+  <file name="simple_rail_with_hal-prebuild.bat" uri="studio:/project/simple_rail_with_hal-prebuild.bat"/>
   <includePath uri="studio:/project/"/>
   <includePath uri="studio:/project/hal-config"/>
   <includePath uri="studio:/project/external-generated-files"/>
@@ -124,6 +124,6 @@
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker" optionId="gnu.cpp.link.option.userobjs">
     <toolListOption toolchainCompatibility="com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904 " value="${StudioSdkPath}/platform/radio/rail_lib/autogen/librail_release/librail_efr32xg22_gcc_release.a"/>
   </toolOption>
-  <prebuildStep> cmd //c 'C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/rail_tutorial-prebuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</prebuildStep>
-  <postbuildStep> cmd //c 'C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/rail_tutorial-postbuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</postbuildStep>
+  <prebuildStep> cmd //c 'C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/simple_rail_with_hal-prebuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</prebuildStep>
+  <postbuildStep> cmd //c 'C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/simple_rail_with_hal-postbuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</postbuildStep>
 </project>

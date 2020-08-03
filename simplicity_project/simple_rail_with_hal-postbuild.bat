@@ -13,4 +13,4 @@ set "studioInstallationDir=%param[4]:"=%"
 set "projDir=%~dp0"
 set "projDir=%projDir:"=%"
 
-"%studioInstallationDir%/developer\adapter_packs\python\Scripts\python.exe"  "%projDir%/rail_tutorial-prebuild.py"
+"%studioInstallationDir%/developer\adapter_packs\python\Scripts\python.exe"  "%projDir%/simple_rail_with_hal-postbuild.py" %param[1]%  %param[2]%  "" "" %param[3]% 
