@@ -62,7 +62,7 @@ external-generated-files/bootloader-interface.o: \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_common.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_assert.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\generic\compiler\platform-common.h \
- C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/flex-configuration.h \
+ C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx/flex-configuration.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\flex\connect\plugins\stack\include\ember-types.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\flex\connect\plugins\stack\config\ember-configuration-defaults.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\bootloader-interface.h \
@@ -209,7 +209,7 @@ c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\generic\compiler\platform-common.h:
 
-C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/flex-configuration.h:
+C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx/flex-configuration.h:
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\flex\connect\plugins\stack\include\ember-types.h:
 

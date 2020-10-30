@@ -68,7 +68,7 @@ hal-efr32/hal_efr.o: \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\config\dmadrv_config.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\bsp\bsp.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\halconfig\bsphalconfig.h \
- C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial\hal-config/hal-config.h \
+ C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx\hal-config/hal-config.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_gpio.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\bsp\bsp_bcp.h \
@@ -85,7 +85,7 @@ hal-efr32/hal_efr.o: \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\radio\rail_lib\common\rail_assert_error_codes.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\radio\rail_lib\hal\hal_common.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_core.h \
- C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/flex-configuration.h
+ C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx/flex-configuration.h
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\device\siliconlabs\efr32bg22\include\em_device.h:
 
@@ -223,7 +223,7 @@ c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\halconfig\bsphalconfig.h:
 
-C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial\hal-config/hal-config.h:
+C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx\hal-config/hal-config.h:
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h:
 
@@ -257,4 +257,4 @@ c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_core.h:
 
-C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/flex-configuration.h:
+C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx/flex-configuration.h:

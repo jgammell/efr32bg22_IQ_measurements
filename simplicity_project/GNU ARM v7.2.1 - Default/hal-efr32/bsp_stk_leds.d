@@ -64,7 +64,7 @@ hal-efr32/bsp_stk_leds.o: \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_gpio.h \
  C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/gecko_sdk_suite/v2.7/hardware/kit/common/bsp/bsp.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\halconfig\bsphalconfig.h \
- C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial\hal-config/hal-config.h \
+ C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx\hal-config/hal-config.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\bsp\bsp_bcp.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_usart.h
@@ -197,7 +197,7 @@ C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/gecko_sdk_suite/v2.7/hardware/
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\halconfig\bsphalconfig.h:
 
-C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial\hal-config/hal-config.h:
+C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx\hal-config/hal-config.h:
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h:
 

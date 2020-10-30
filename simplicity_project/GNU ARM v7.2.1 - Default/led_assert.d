@@ -1,7 +1,7 @@
 led_assert.o: ../led_assert.c ../led_assert.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\bsp\bsp.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\halconfig\bsphalconfig.h \
- C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial\hal-config/hal-config.h \
+ C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx\hal-config/hal-config.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\device\siliconlabs\efr32bg22\include\em_device.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\device\siliconlabs\efr32bg22\include\efr32bg22c224f512im40.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\cmsis\include\core_cm33.h \
@@ -71,7 +71,7 @@ c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\halconfig\bsphalconfig.h:
 
-C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial\hal-config/hal-config.h:
+C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx\hal-config/hal-config.h:
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\device\siliconlabs\efr32bg22\include\em_device.h:
 

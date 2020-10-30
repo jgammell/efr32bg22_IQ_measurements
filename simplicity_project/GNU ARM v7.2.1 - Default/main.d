@@ -60,7 +60,7 @@ main.o: ../main.c \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_gpio.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_bus.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_assert.h \
- C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial\hal-config/hal-config.h \
+ C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx\hal-config/hal-config.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_gpio.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\bsp\bsp.h \
@@ -79,9 +79,8 @@ main.o: ../main.c \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\radio\rail_lib\hal\hal_common.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_core.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_common.h \
- C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/flex-configuration.h \
- ../rail_config.h ../led_assert.h ../oneshot_timer.h \
- c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_timer.h
+ C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx/flex-configuration.h \
+ ../rail_config.h ../led_assert.h ../tx.h ../rx.h
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_chip.h:
 
@@ -205,7 +204,7 @@ c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_assert.h:
 
-C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial\hal-config/hal-config.h:
+C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx\hal-config/hal-config.h:
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h:
 
@@ -243,12 +242,12 @@ c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_common.h:
 
-C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/flex-configuration.h:
+C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx/flex-configuration.h:
 
 ../rail_config.h:
 
 ../led_assert.h:
 
-../oneshot_timer.h:
+../tx.h:
 
-c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_timer.h:
+../rx.h:

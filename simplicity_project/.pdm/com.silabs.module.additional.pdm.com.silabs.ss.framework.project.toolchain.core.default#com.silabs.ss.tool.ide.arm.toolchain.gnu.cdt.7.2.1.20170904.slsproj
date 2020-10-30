@@ -13,9 +13,6 @@
     <file name="btl_interface_storage.c" uri="studio:/sdk/platform/bootloader/api/btl_interface_storage.c"/>
   </folder>
   <file name="MultiPhyConfiguration.xml" uri="studio:/project/MultiPhyConfiguration.xml"/>
-  <file name="rail_config.c" uri="studio:/project/rail_config.c"/>
-  <file name="rail_test_commands.txt" uri="studio:/project/rail_test_commands.txt"/>
-  <file name="rail_config.h" uri="studio:/project/rail_config.h"/>
   <file name="efr32_radio_configurator_log.txt" uri="studio:/project/efr32_radio_configurator_log.txt"/>
   <file name="custom_efr32bg22c224f512im40.hwconf" uri="studio:/project/custom_efr32bg22c224f512im40.hwconf"/>
   <file name="main.c" uri="studio:/project/main.c"/>
@@ -124,6 +121,6 @@
   <toolOption toolId="com.silabs.ide.si32.gcc.cdt.managedbuild.tool.gnu.cpp.linker" optionId="gnu.cpp.link.option.userobjs">
     <toolListOption toolchainCompatibility="com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:7.2.1.20170904 " value="${StudioSdkPath}/platform/radio/rail_lib/autogen/librail_release/librail_efr32xg22_gcc_release.a"/>
   </toolOption>
-  <prebuildStep> cmd //c 'C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/simple_rail_with_hal-prebuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</prebuildStep>
-  <postbuildStep> cmd //c 'C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/simple_rail_with_hal-postbuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</postbuildStep>
+  <prebuildStep> cmd //c 'C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx/simple_rail_with_hal-prebuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</prebuildStep>
+  <postbuildStep> cmd //c 'C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx/simple_rail_with_hal-postbuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</postbuildStep>
 </project>

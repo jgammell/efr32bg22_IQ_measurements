@@ -63,7 +63,7 @@ hal-efr32/i2cspm.o: \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_common.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_gpio.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\halconfig\i2cspmhalconfig.h \
- C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial\hal-config/hal-config.h \
+ C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx\hal-config/hal-config.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h \
  C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/gecko_sdk_suite/v2.7/hardware/kit/common/drivers/i2cspm.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_i2c.h \
@@ -195,7 +195,7 @@ c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\hardware\kit\common\halconfig\i2cspmhalconfig.h:
 
-C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial\hal-config/hal-config.h:
+C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx\hal-config/hal-config.h:
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h:
 

@@ -62,7 +62,7 @@ hal-efr32/hal_common.o: \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_assert.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_gpio.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_bus.h \
- C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/flex-configuration.h \
+ C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx/flex-configuration.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\radio\rail_lib\common\rail_types.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_common.h \
  c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_cmu.h \
@@ -192,7 +192,7 @@ c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_bus.h:
 
-C:\Users\jgamm\SimplicityStudio\v4_workspace\rail_tutorial/flex-configuration.h:
+C:\Users\jgamm\SimplicityStudio\v4_workspace\toggle_tx/flex-configuration.h:
 
 c:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\radio\rail_lib\common\rail_types.h:
 
