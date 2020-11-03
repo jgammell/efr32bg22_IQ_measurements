@@ -2,11 +2,11 @@ API version: 5.5.0
 
 Protocol Configuration - Channel Group 1
   Informational data:
-    Preamble Binary Pattern = 01 
-    Sync Word Binary Pattern = 01 
-    Actual Bandwidth = 2078803 
+    Preamble Binary Pattern = 0101010101010101010101010101010101010101 
+    Sync Word Binary Pattern = 1111011010001101 
+    Actual Bandwidth = 50032 
     Desired baudrate = 50000 
-    Actual sample frequency = 9499875.44182947 
+    Actual sample frequency = 199999.18521560577 
     Antenna diversity mode = 0 
     Disable repeated measurement of first antenna when Select-Best algorithm is used = 0 
     FEC enabled flag = 0 
@@ -14,8 +14,8 @@ Protocol Configuration - Channel Group 1
     Timing Detection Threshold = 20 
     Timing Samples Threshold = 12 
     Frequency Offset Compensation (AFC) Limit = 0 Hz
-    Acquistion Channel Bandwidth = 2050000 Hz
-    IF Frequency = 300000 Hz
+    Acquistion Channel Bandwidth = 50000 Hz
+    IF Frequency = 219450 Hz
     PLL Bandwidth in TX mode = PLLBandwdithEnum.BW_1000KHz 
     PLL Bandwidth in RX mode = PLLBandwdithEnum.BW_250KHz 
     Number of Symbols in Timing Window = 14 

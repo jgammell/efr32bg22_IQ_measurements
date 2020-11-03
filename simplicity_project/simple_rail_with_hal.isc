@@ -188,10 +188,6 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
           <value>bool:false</value>
         </input>
         <input>
-          <key>BANDWIDTH_HZ</key>
-          <value>null</value>
-        </input>
-        <input>
           <key>BASE_FREQUENCY_HZ</key>
           <value>long:2450000000</value>
         </input>
@@ -237,7 +233,7 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
         </input>
         <input>
           <key>DEVIATION</key>
-          <value>int:1000000</value>
+          <value>int:0</value>
         </input>
         <input>
           <key>DIFF_ENCODING_MODE</key>
@@ -281,7 +277,7 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
         </input>
         <input>
           <key>FIXED_LENGTH_SIZE</key>
-          <value>int:1</value>
+          <value>int:16</value>
         </input>
         <input>
           <key>FRAME_BITENDIAN</key>
@@ -444,10 +440,6 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
           <value>bool:false</value>
         </input>
         <input>
-          <key>IF_FREQUENCY_HZ</key>
-          <value>int:300000</value>
-        </input>
-        <input>
           <key>INPUT_DECIMATION_FILTER_ALLOW_DEC3</key>
           <value>null</value>
         </input>
@@ -493,7 +485,7 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
         </input>
         <input>
           <key>PAYLOAD_CRC_EN</key>
-          <value>bool:false</value>
+          <value>bool:true</value>
         </input>
         <input>
           <key>PAYLOAD_WHITE_EN</key>
@@ -513,7 +505,7 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
         </input>
         <input>
           <key>PREAMBLE_LENGTH</key>
-          <value>int:2</value>
+          <value>int:40</value>
         </input>
         <input>
           <key>PREAMBLE_PATTERN</key>
@@ -537,7 +529,7 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
         </input>
         <input>
           <key>SHAPING_FILTER</key>
-          <value>serializableObject:EnumDataItem:0</value>
+          <value>serializableObject:EnumDataItem:1</value>
         </input>
         <input>
           <key>SHAPING_FILTER_PARAM</key>
@@ -573,7 +565,7 @@ NOTE: Due to the higher current consumption of the continuous radio usage (espec
         </input>
         <input>
           <key>SYNCWORD_LENGTH</key>
-          <value>int:2</value>
+          <value>int:16</value>
         </input>
         <input>
           <key>SYNCWORD_TX_SKIP</key>

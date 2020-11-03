@@ -20,10 +20,6 @@
           <value>3</value>
         </input>
         <input>
-          <key>Advanced.if_frequency_hz</key>
-          <value>300000</value>
-        </input>
-        <input>
           <key>Advanced.pll_bandwidth_tx</key>
           <value>1</value>
         </input>
@@ -85,7 +81,7 @@
         </input>
         <input>
           <key>frame_fixed_length.fixed_length_size</key>
-          <value>1</value>
+          <value>16</value>
         </input>
         <input>
           <key>frame_general.frame_bitendian</key>
@@ -117,7 +113,7 @@
         </input>
         <input>
           <key>frame_payload.payload_crc_en</key>
-          <value>false</value>
+          <value>true</value>
         </input>
         <input>
           <key>frame_payload.payload_white_en</key>
@@ -277,7 +273,7 @@
         </input>
         <input>
           <key>modem.deviation</key>
-          <value>1000000</value>
+          <value>0</value>
         </input>
         <input>
           <key>modem.fsk_symbol_map</key>
@@ -289,7 +285,7 @@
         </input>
         <input>
           <key>modem.shaping_filter</key>
-          <value>0</value>
+          <value>1</value>
         </input>
         <input>
           <key>modem.shaping_filter_param</key>
@@ -309,7 +305,7 @@
         </input>
         <input>
           <key>preamble.preamble_length</key>
-          <value>2</value>
+          <value>40</value>
         </input>
         <input>
           <key>preamble.preamble_pattern</key>
@@ -353,7 +349,7 @@
         </input>
         <input>
           <key>syncword.syncword_length</key>
-          <value>2</value>
+          <value>16</value>
         </input>
         <input>
           <key>syncword.syncword_tx_skip</key>

@@ -3,6 +3,17 @@
 
 #%% 
 
+from matplotlib import pyplot as plt
+import numpy as np
+from scipy.stats import linregress
+import serial
+import pickle
+import datetime
+import os
+import re
+import time
+
+
 def read_output(port):
     num_samples = int(port.readline()[:-1])
     I = []
@@ -15,11 +26,76 @@ def read_output(port):
     return (I, Q)   
    
 # Code to get IQ measurements at fixed distance, and record mean phase jump between adjacent samples
+try:
+    TX = serial.Serial('COM8')
+    RX = serial.Serial('COM9')
+    TX.write(b't')
+    RX.write(b'r')
+    I_RX, Q_RX = read_output(RX)
+    time.sleep(.1)
+    TX.write(b't')
+    time.sleep(.1)
+    RX.write(b't')
+    time.sleep(.1)
+    TX.write(b'r')
+    time.sleep(.1)
+    RX.write(b't')
+    I_TX, Q_TX = read_output(TX)
+    
+    dt = datetime.datetime.now()
+    filename =  r'efr32bg22_%d-%d-%d_%d-%d-%d.pickle'\
+        %(dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second)
+    with open(os.path.join(r'C:\Users\jgamm\Desktop\2020-10-29', filename), 'wb') as F:
+        pickle.dump((I_TX, Q_TX, I_RX, Q_RX), F)
+finally:
+    TX.close()
+    RX.close()
+    
+#%%
 
+import pickle
+import os
 from matplotlib import pyplot as plt
 import numpy as np
 from scipy.stats import linregress
 
+with open(os.path.join(r'C:/Users/jgamm/Desktop/2020-10-29/', filename), 'rb') as F:
+    (I_TX, Q_TX, I_RX, Q_RX) = pickle.load(F)
+assert len(I_TX) == len(Q_TX)
+assert len(I_RX) == len(Q_RX)
+sample_indices_TX = np.arange(0, len(I_TX))
+sample_indices_RX = np.arange(0, len(I_RX))
+phase_TX = np.unwrap(np.arctan2(Q_TX, I_TX))
+phase_RX = np.unwrap(np.arctan2(Q_RX, I_RX))
+
+(fig, axes) = plt.subplots(1, 2)
+axes[0].plot(I_TX, Q_TX, '.', color='blue')
+axes[1].plot(I_RX, Q_RX, '.', color='blue')
+axes[0].set_xlabel('I')
+axes[0].set_ylabel('Q')
+axes[1].set_xlabel('I')
+axes[0].set_title('Transmit side')
+axes[1].set_title('Receive side')
+fig.suptitle('Q vs I for samples')
+
+(fig, axes) = plt.subplots(1, 2)
+axes[0].plot(sample_indices_TX, phase_TX, color='blue')
+axes[1].plot(sample_indices_RX, phase_RX, color='blue')
+axes[0].set_xlabel('Sample index')
+axes[1].set_xlabel('Sample index')
+axes[0].set_ylabel('Unwrapped phase')
+axes[0].set_title('Transmit side')
+axes[1].set_title('Receive side')
+fig.suptitle('Unwrapped phase')
+    
+    
+    
+    
+    
+    
+    
+#%%
+r"""
 J = 0
 
 try:
@@ -48,21 +124,21 @@ try:
         #plt.ylim([-4, 4])
         plt.plot(range(len(phase)), phase)
         #plt.ylim([-200, 200])
-        """m, b, _, _, _ = linregress(range(len(phase)), np.unwrap(phase))
+        m, b, _, _, _ = linregress(range(len(phase)), np.unwrap(phase))
         print('m = %1.2f, b %1.2f'%(m, b))
         ax[0].cla()
         ax[1].cla()
         ax[0].plot(range(len(I)), I)
         ax[1].plot(range(len(phase)), np.unwrap(phase), '.', markersize=10)
         ax[1].set_xlim([50, 200])
-        ax[1].set_ylim([-200, 200])"""
+        ax[1].set_ylim([-200, 200])
         #plt.pause(.05)
     print('Mean: %1.3f'%(np.mean(jumps_means)))
     print('StDev: %1.3f'%(np.std(jumps_means)))
 finally:
     del TX
     del RX
-    
+""";
 #%%
 
 # Distance measurements taken by hand - in my bedroom/living room

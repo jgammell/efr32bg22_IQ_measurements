@@ -54,6 +54,7 @@ SOURCE_FILES = \
   ../../../../../SiliconLabs/SimplicityStudio/v4/developer/sdks/gecko_sdk_suite/v2.7/platform/radio/rail_lib/hal/efr32/hal_efr.c \
   ../../../../../SiliconLabs/SimplicityStudio/v4/developer/sdks/gecko_sdk_suite/v2.7/platform/radio/rail_lib/hal/hal_common.c \
   main.c \
+  rail_config.c \
 
 
 LIB_FILES = \
